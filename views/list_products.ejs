@@ -1,0 +1,29 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head.ejs') %>
+    </head>
+    <body>
+        <%- include('./partials/header.ejs')  %>
+        <div class="container">
+            <h2 class="my-3">Listado de Producto</h2>
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Foto</th>
+                        <th>Titulo</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="productListContainer">
+                </tbody>
+            </table>
+
+        </div>
+        <%- include('./partials/footer.ejs')  %>
+        <%- include('./partials/basejs.ejs')  %>
+        <script src="assets/js/list_products.js"></script>
+    </body>
+</html>

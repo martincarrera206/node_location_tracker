@@ -1,0 +1,84 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head.ejs') %>
+        <link rel="stylesheet" href="assets/css/chat.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    </head>
+    <body>
+        <%- include('./partials/header.ejs')  %>
+        <div class="container">
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="email" name="userEmail" id="userEmail" class="form-control">
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-between">
+                    <button type="button" id="btnLoginUser" name="btnLoginUser" class="btn btn-success" style="width: 49%;">Ingresar a la Sala</button>
+                    <button type="button" id="btnLogoutUser" name="btnLogoutUser" class="btn btn-secondary"  style="width: 49%;" disabled>Salir de Sala</button>
+                </div>
+              </div>
+            
+            <div class="chat-parent p-3 mt-3">
+                <div class="chat-blur"></div>
+                <div class="row justify-content-center mt-3">
+                    <div class="col-md-4 col-xl-3 chat">
+                        <div class="card w-100 mb-sm-3 mb-md-0 contacts_card">
+                            <div class="card-header">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Buscar usuario..." name="" class="form-control search">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body contacts_body">
+                                <ui class="contacts">
+                                </ui>
+                            </div>
+                            <div class="card-footer"><span id=""></span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-xl-9 chat">
+                        <div class="card">
+                            <div class="card-header msg_head">
+                                <div class="d-flex bd-highlight" >
+                                    <div class="img_cont">
+                                        <img id="imgUserAvatar" src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+                                        <span class="online_icon"></span>
+                                    </div>
+                                    <div class="user_info">
+                                        <span id="spnUserName">Chat with Khalid</span>
+                                    </div>
+                                </div>
+                                <span id="action_menu_btn"><i class="fas fa-sign-out"></i></span>
+                            </div>
+                            <div class="card-body msg_card_body" id="">
+    
+                            </div>
+                            <div class="card-footer">
+                                <div class="input-group">
+                                    <textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                                    <div class="input-group-append" id=" ">
+                                        <span id="sendMessage" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+		</div>
+        <%- include('./partials/footer.ejs')  %>
+        <%- include('./partials/basejs.ejs')  %>
+        <script src="assets/js/chat.js"></script>
+    </body>
+</html>
